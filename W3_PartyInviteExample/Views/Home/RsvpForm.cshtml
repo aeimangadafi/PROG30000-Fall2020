@@ -1,0 +1,42 @@
+﻿@model GuestResponse
+
+@{
+    Layout = null;
+}
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <p>This is the rsvp form</p>
+
+<form asp-action="SaveGuestResponse" method="post">
+    <div>
+        <label asp-for="Name" >Your Name:</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Email">Your Email:</label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="PhoneNumber">Your Phone Number:</label>
+        <input asp-for="PhoneNumber" />
+    </div>
+    <div>
+        <label asp-for="WillAttend">Will you attend?</label>
+        <select asp-for="WillAttend">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+    </div>
+    <button type="submit">Submit RSVP</button>
+
+</form>
+
+</body>
+</html>
